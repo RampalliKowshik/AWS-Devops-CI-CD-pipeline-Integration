@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/RampalliKowshik/AWS-Devops-CI-CD-pipeline-Integration.git'
+                git credentialsId: 'GIT_ID', branch: 'main', url: 'https://github.com/RampalliKowshik/AWS-Devops-CI-CD-pipeline-Integration.git'
             }
         }
 
