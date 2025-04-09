@@ -6,4 +6,4 @@ COPY . .
 
 RUN javac */*.java *.java
 
-CMD ["java", "Main"]
+CMD ["java", "Main", "10", "5"]
