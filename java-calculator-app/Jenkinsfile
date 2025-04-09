@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = "kowshikrampalli/java-calculator-app:latest"
-        DOCKER_CREDENTIALS_ID = 'Docker_ID'
+        DOCKER_CREDENTIALS_ID = 'Docker'
     }
 
     stages {
