@@ -1,0 +1,28 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: java-calculator-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: java-calculator-app
+  template:
+    metadata:
+      labels:
+        app: java-calculator-app
+    spec:
+      nodeSelector:
+        role: app-server
+      tolerations:
+      - key: "foo"
+        operator: "Equal"
+        value: "bar"
+        effect: "NoSchedule"
+      containers:
+      - name: java-calculator-app
+        image: kowshikrampalli/java-calculator-app:v3
+        ports:
+        - containerPort: 9090
+        

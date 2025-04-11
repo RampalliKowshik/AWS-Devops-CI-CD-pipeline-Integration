@@ -1,0 +1,37 @@
+nohup: ignoring input
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.15)
+
+2025-04-09 17:41:12.484  INFO 31707 --- [           main] c.e.javacalculator.JavaCalculatorApp     : Starting JavaCalculatorApp v1.0.0 using Java 17.0.14 on ip-10-0-3-175 with PID 31707 (/home/ubuntu/devops-project/terraform/envs/dev/AWS-Devops-CI-CD-pipeline-Integration/java-calculator-app/target/java-calculator-app-1.0.0.jar started by ubuntu in /home/ubuntu/devops-project/terraform/envs/dev/AWS-Devops-CI-CD-pipeline-Integration/java-calculator-app)
+2025-04-09 17:41:12.486  INFO 31707 --- [           main] c.e.javacalculator.JavaCalculatorApp     : No active profile set, falling back to 1 default profile: "default"
+2025-04-09 17:41:13.278  INFO 31707 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2025-04-09 17:41:13.287  INFO 31707 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-09 17:41:13.288  INFO 31707 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.79]
+2025-04-09 17:41:13.354  INFO 31707 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-09 17:41:13.354  INFO 31707 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 823 ms
+2025-04-09 17:41:13.662  INFO 31707 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2025-04-09 17:41:13.672  INFO 31707 --- [           main] c.e.javacalculator.JavaCalculatorApp     : Started JavaCalculatorApp in 1.523 seconds (JVM running for 1.854)
+2025-04-10 04:49:16.694  INFO 31707 --- [0.0-9090-exec-1] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000xee0x010x000x000xea0x030x03I0x060xb20xf90xbc0x99i0xc0Y0xfb0xf80xbae-0x83Ud]0x0e0x8d0xb7b80xb4g0xc60xdd9dZ8f ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-9.0.79.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263) ~[tomcat-embed-core-9.0.79.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.79.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.79.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1790) ~[tomcat-embed-core-9.0.79.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.79.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.79.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.79.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.79.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2025-04-10 10:19:08.007  INFO 31707 --- [0.0-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-10 10:19:08.007  INFO 31707 --- [0.0-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-10 10:19:08.008  INFO 31707 --- [0.0-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms

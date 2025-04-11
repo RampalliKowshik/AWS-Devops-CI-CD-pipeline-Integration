@@ -1,0 +1,15 @@
+
+apiVersion: kops.k8s.io/v1alpha2
+kind: InstanceGroup
+metadata:
+  name: node-ap-south-1a
+  labels:
+    kops.k8s.io/cluster: clustera.k8s.local
+spec:
+  role: Node
+  machineType: t3.xlarge
+  minSize: 2
+  maxSize: 2
+  subnets:
+    - subnet-064843f3bd2cc980c  # Update with correct subnet IDs for your nodes
+

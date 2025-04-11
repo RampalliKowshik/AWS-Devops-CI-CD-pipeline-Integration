@@ -1,0 +1,39 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: java-calculator-app
+  labels:
+    app: java-calculator
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: java-calculator
+  template:
+    metadata:
+      labels:
+        app: java-calculator
+    spec:
+      containers:
+        - name: java-calculator
+          image: kowshikrampalli/java-calculator-app:latest
+          ports:
+            - containerPort: 9090
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "200m"
+              memory: "256Mi"
+          env:
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:mysql://52.66.164.71:3306/calculator
+            - name: SPRING_DATASOURCE_USERNAME
+              value: calcuser
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: ""
+          imagePullPolicy: Always
+      restartPolicy: Always
+
