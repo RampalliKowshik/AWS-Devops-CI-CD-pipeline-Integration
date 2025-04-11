@@ -1,0 +1,4 @@
+/home/ubuntu/devops-project/terraform/envs/dev/AWS-Devops-CI-CD-pipeline-Integration/java-calculator-app/src/main/java/com/example/javacalculator/JavaCalculatorApp.java
+/home/ubuntu/devops-project/terraform/envs/dev/AWS-Devops-CI-CD-pipeline-Integration/java-calculator-app/src/main/java/com/example/javacalculator/CalculatorService.java
+/home/ubuntu/devops-project/terraform/envs/dev/AWS-Devops-CI-CD-pipeline-Integration/java-calculator-app/src/main/java/com/example/javacalculator/InputHelper.java
+/home/ubuntu/devops-project/terraform/envs/dev/AWS-Devops-CI-CD-pipeline-Integration/java-calculator-app/src/main/java/com/example/javacalculator/controller/CalculatorController.java

@@ -5,10 +5,10 @@ metadata:
   name: java-calculator-service
 spec:
   selector:
-    app: java-calculator
+    app: java-calculator-app  # Ensure this matches the pod label
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 8090
+      targetPort: 9090
   type: LoadBalancer
 

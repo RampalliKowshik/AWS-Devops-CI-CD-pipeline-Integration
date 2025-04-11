@@ -1,0 +1,51 @@
+apiVersion: kops.k8s.io/v1alpha2
+kind: Cluster
+metadata:
+  name: clustera.k8s.local
+spec:
+  cloudProvider: aws
+  kubernetesVersion: "1.29.0"
+  additionalPolicies:
+    node: |
+      [
+        {
+          "Effect": "Allow",
+          "Action": ["ecr:*"],
+          "Resource": "*"
+        }
+      ]
+  networking:
+    calico: {}
+  topology:
+    masters: private
+    nodes: private
+  api:
+    dns:
+      type: Private
+  networkCIDR: 10.0.0.0/16
+  serviceClusterIPRange: 100.64.0.0/13
+  podCIDR: 100.96.0.0/11
+  nonMasqueradeCIDR: 100.64.0.0/10
+  sshAccess:
+    - 0.0.0.0/0
+  authorization:
+    rbac: {}
+  etcdClusters:
+    - name: main
+      etcdMembers:
+        - name: a
+          instanceGroup: master-ap-south-1a
+  subnets:
+  - id: subnet-0402be255e3e3320c
+    name: subnet-ap-south-1c
+    zone: ap-south-1c
+    type: Private
+  - id: subnet-01c7d758983b8ec26
+    name: subnet-ap-south-1b
+    zone: ap-south-1b
+    type: Private
+  - id: subnet-064843f3bd2cc980c
+    name: Subnet3   # Make sure this matches the exact name
+    zone: ap-south-1a
+    type: Private
+
